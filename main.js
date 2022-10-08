@@ -1,4 +1,4 @@
-const mainContainer = document.getElementById('#container');
+const mainContainer = document.getElementById('container');
 let notificationDiv = document.createElement('div')
 
 const users = [
@@ -54,7 +54,9 @@ const users = [
 ]
 function displayNotification() {
  for (let elm of users) {
-     mainContainer.appendChild(notificationDiv)
+    mainContainer.appendChild(notificationDiv)
+    notificationDiv.classList.add('notification')
+    notificationDiv.innerHTML=elm.name
 }
 }
 
